@@ -32,6 +32,7 @@ Where c.Name = ' Appliance' or c.Name = 'Games';
 /* joins: find the product name, total # sold, and total price sold,
  for Eagles: Hotel California --You may need to use SUM() */
 Select p.Name, Sum(s.Quanity) AS ' Total Sold', Sum(s.Quanity * s.PricePerUnit) AS 'Total Price'
+FROM products AS p
 Inner Join Categories AS c on c.DepartmentID = p.DepartmentID
 Where p.ProductID = 97;
 
